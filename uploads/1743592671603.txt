@@ -1,0 +1,30 @@
+import React from "react";
+import { AppBar, Toolbar, Typography } from "@mui/material";
+
+function Header() {
+  return (
+    <AppBar
+      position="fixed"
+      sx={{
+        zIndex: 1201, // Ensures the header is above the sidebar
+        backgroundColor: "#0d2b5d",
+        width: "calc(100% - 250px)", // Adjusts width based on sidebar width
+        left: "280px", // Moves header right, avoiding sidebar
+      }}
+    >
+      <Toolbar>
+        <Typography variant="h8" sx={{ flexGrow: 1 }}>
+          SmartContract App
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
+}
+
+export default Header;
+
+
+
+<div style={{ display: "flex", flexDirection: "column" }}>
+        {user && <Header />}
+import Header from "./components/Header";
